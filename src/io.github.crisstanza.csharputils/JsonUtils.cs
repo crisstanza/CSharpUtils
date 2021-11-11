@@ -1,4 +1,5 @@
-﻿using System.Text.Json;
+﻿using System.Text;
+using System.Text.Json;
 
 namespace io.github.crisstanza.csharputils
 {
@@ -9,6 +10,11 @@ namespace io.github.crisstanza.csharputils
 		public JsonUtils(bool debug)
 		{
 			this.debug = debug;
+		}
+
+		public byte[] SerializeToArray<T>(T jsonObject)
+		{
+			return Encoding.UTF8.GetBytes(Serialize(jsonObject) ?? "");
 		}
 
 		public string Serialize<T>(T jsonObject)
