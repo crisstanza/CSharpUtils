@@ -31,7 +31,7 @@ namespace io.github.crisstanza.csharputils
 
 			processCounter.NextValue();
 			cpuCounter.NextValue();
-			Thread.Sleep(500);
+			Thread.Sleep(250);
 
 			cpuDiagnostics.InstanceCounter = processCounter.NextValue();
 			cpuDiagnostics.ProcessorCounter = cpuCounter.NextValue();

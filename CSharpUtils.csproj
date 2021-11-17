@@ -51,6 +51,7 @@
     <Compile Include="src\io.github.crisstanza.csharputils\constants\MediaTypeNamesConstants.cs" />
     <Compile Include="src\io.github.crisstanza.csharputils\DateTimeUtils.cs" />
     <Compile Include="src\io.github.crisstanza.csharputils\DiagnosticsUtils.cs" />
+    <Compile Include="src\io.github.crisstanza.csharputils\DiagnosticsUtils2.cs" />
     <Compile Include="src\io.github.crisstanza.csharputils\FileSystemUtils.cs" />
     <Compile Include="src\io.github.crisstanza.csharputils\HttpClientUtils.cs" />
     <Compile Include="src\io.github.crisstanza.csharputils\HttpListenerUtils.cs" />
