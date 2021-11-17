@@ -21,6 +21,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <PlatformTarget>AnyCPU</PlatformTarget>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -45,15 +46,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="src\io.github.crisstanza.csharputils\constants\StopwatchConstants.cs" />
     <Compile Include="src\io.github.crisstanza.csharputils\constants\DateFormatConstants.cs" />
     <Compile Include="src\io.github.crisstanza.csharputils\constants\MediaTypeNamesConstants.cs" />
     <Compile Include="src\io.github.crisstanza.csharputils\DateTimeUtils.cs" />
+    <Compile Include="src\io.github.crisstanza.csharputils\DiagnosticsUtils.cs" />
     <Compile Include="src\io.github.crisstanza.csharputils\FileSystemUtils.cs" />
+    <Compile Include="src\io.github.crisstanza.csharputils\HttpClientUtils.cs" />
     <Compile Include="src\io.github.crisstanza.csharputils\HttpListenerUtils.cs" />
     <Compile Include="src\io.github.crisstanza.csharputils\ArrayUtils.cs" />
     <Compile Include="src\io.github.crisstanza.csharputils\JsonUtils.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="src\io.github.crisstanza.csharputils\ListUtils.cs" />
+    <Compile Include="src\io.github.crisstanza.csharputils\StopwatchUtils.cs" />
     <Compile Include="src\io.github.crisstanza.csharputils\StringUtils.cs" />
     <Compile Include="src\io.github.crisstanza.csharputils\StreamUtils.cs" />
   </ItemGroup>
