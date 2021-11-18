@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="src\io.github.crisstanza.csharputils\NumberUtils.cs" />
     <Compile Include="src\io.github.crisstanza.csharputils\constants\StopwatchConstants.cs" />
     <Compile Include="src\io.github.crisstanza.csharputils\constants\DateFormatConstants.cs" />
     <Compile Include="src\io.github.crisstanza.csharputils\constants\MediaTypeNamesConstants.cs" />
