@@ -9,6 +9,13 @@ namespace io.github.crisstanza.csharputils
 {
 	public class HttpListenerUtils
 	{
+		public class OutputBody
+		{
+			public byte[] Body { get; set; }
+			public string ContentType { get; set; }
+			public HttpStatusCode Status { get; set; }
+		}
+
 		private readonly StreamUtils streamUtils;
 		private readonly StringUtils stringUtils;
 
@@ -65,18 +72,18 @@ namespace io.github.crisstanza.csharputils
 			String input = this.streamUtils.ReadToEnd(request.InputStream, request.ContentEncoding);
 			return input;
 		}
-		public void Write(HttpListenerResponse response, string contentType, string buffer)
+		public void Write(HttpListenerResponse response, string contentType, string buffer, HttpStatusCode statusCode)
 		{
-			Write(response, contentType, Encoding.UTF8.GetBytes(buffer ?? ""));
+			Write(response, contentType, Encoding.UTF8.GetBytes(buffer ?? ""), statusCode);
 		}
-		public void Write(HttpListenerResponse response, string contentType, byte[] buffer)
+		public void Write(HttpListenerResponse response, string contentType, byte[] buffer, HttpStatusCode statusCode)
 		{
 			if (contentType != null)
 			{
 				response.ContentType = contentType;
 			}
 			response.ContentLength64 = buffer.Length;
-			response.StatusCode = (int)HttpStatusCode.OK;
+			response.StatusCode = (int)statusCode;
 			Stream output = response.OutputStream;
 			output.Write(buffer, 0, buffer.Length);
 			output.Close();
