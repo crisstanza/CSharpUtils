@@ -6,7 +6,7 @@ namespace io.github.crisstanza.csharputils
     {
         public string FromByteArray(byte[] array)
         {
-            return Convert.ToBase64String(array);
+            return array == null ? null : Convert.ToBase64String(array);
         }
     }
 }
