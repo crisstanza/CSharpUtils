@@ -47,6 +47,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="src\io.github.crisstanza.csharputils\Base64Utils.cs" />
     <Compile Include="src\io.github.crisstanza.csharputils\EnumUtils.cs" />
     <Compile Include="src\io.github.crisstanza.csharputils\NumberUtils.cs" />
     <Compile Include="src\io.github.crisstanza.csharputils\constants\StopwatchConstants.cs" />

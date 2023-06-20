@@ -9,6 +9,5 @@ namespace io.github.crisstanza.csharputils
 		{
 			return DateTime.Now.ToString(DateFormatConstants.DDMMYYYY_HHMMSSMICROS);
 		}
-
 	}
 }

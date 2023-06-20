@@ -10,8 +10,7 @@ namespace io.github.crisstanza.csharputils
 			StreamReader reader = new StreamReader(inputStream, contentEncoding);
 			try
 			{
-				string all = reader.ReadToEnd();
-				return all;
+				return reader.ReadToEnd();
 			}
 			finally
 			{

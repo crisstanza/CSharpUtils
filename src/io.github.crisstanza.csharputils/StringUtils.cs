@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace io.github.crisstanza.csharputils
+﻿namespace io.github.crisstanza.csharputils
 {
 	public class StringUtils
 	{
@@ -8,7 +6,6 @@ namespace io.github.crisstanza.csharputils
         {
             return this.IsBlank(value) ? fallback : value;
         }
-
         public bool IsBlank(string value)
 		{
 			return value == null || value.Trim().Length == 0;
