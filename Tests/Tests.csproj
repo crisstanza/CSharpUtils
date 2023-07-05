@@ -51,6 +51,7 @@
   <ItemGroup>
     <Compile Include="src\tests\Base64UtilsTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="src\tests\ArrayUtilsTests.cs" />
     <Compile Include="src\tests\BooleanUtilsTests.cs" />
   </ItemGroup>
   <ItemGroup>
