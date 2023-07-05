@@ -1,6 +1,5 @@
 ﻿using io.github.crisstanza.csharputils;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using System;
 using System.Runtime.Serialization;
 
 namespace tests

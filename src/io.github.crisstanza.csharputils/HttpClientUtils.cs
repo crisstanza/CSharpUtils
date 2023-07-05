@@ -1,6 +1,5 @@
 ﻿using io.github.crisstanza.csharputils.constants;
 using System;
-using System.Diagnostics;
 using System.Net.Http;
 using System.Text;
 

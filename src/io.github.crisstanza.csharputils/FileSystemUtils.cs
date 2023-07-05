@@ -7,7 +7,9 @@ namespace io.github.crisstanza.csharputils
 	{
 		public string CurrentPath()
 		{
-			return Path.GetDirectoryName(Assembly.GetEntryAssembly().Location) + Path.DirectorySeparatorChar;
+            Assembly assembly = Assembly.GetEntryAssembly();
+            string location = assembly == null ? Assembly.GetCallingAssembly().Location : assembly.Location;
+            return Path.GetDirectoryName(location) + Path.DirectorySeparatorChar;
 		}
 	}
 }
