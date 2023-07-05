@@ -14,12 +14,19 @@ namespace io.github.crisstanza.csharputils
             {
                 return null;
             }
-            IList<CustomAttributeNamedArgument> namedArguments = memberInfos[0].CustomAttributes.FirstOrDefault().NamedArguments;
-            if (namedArguments.Count == 0)
+            IEnumerable<CustomAttributeData> memberInfoCustomAttributes = memberInfos[0].CustomAttributes;
+            CustomAttributeData memberInfoCustomAttribute = memberInfoCustomAttributes.FirstOrDefault();
+            if (memberInfoCustomAttribute == null)
             {
                 return null;
             }
-            return namedArguments[0].TypedValue.Value.ToString();
+            IList<CustomAttributeNamedArgument> memberInfoCustomAttributeNamedArguments = memberInfoCustomAttribute.NamedArguments;
+            if (memberInfoCustomAttributeNamedArguments.Count == 0)
+            {
+                return null;
+            }
+            CustomAttributeNamedArgument memberInfoCustomAttributeNamedArgument = memberInfoCustomAttributeNamedArguments[0];
+            return memberInfoCustomAttributeNamedArgument.TypedValue.Value.ToString();
         }
     }
 }
