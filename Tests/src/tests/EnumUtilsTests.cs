@@ -15,14 +15,18 @@ namespace tests
             [EnumMember(Value = "some value")]
             Some,
 
+            [EnumMember(Value = null)]
+            Null,
+
             [EnumMember]
-            Null
+            NoValue
         }
 
         [TestMethod]
         [DataRow("None", null)]
         [DataRow("Some", "some value")]
         [DataRow("Null", null)]
+        [DataRow("NoValue", null)]
         [DataRow("NotFound", null)]
         public void GetMemberValue(string inputName, string expected)
         {

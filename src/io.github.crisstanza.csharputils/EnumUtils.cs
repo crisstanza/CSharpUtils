@@ -26,7 +26,7 @@ namespace io.github.crisstanza.csharputils
                 return null;
             }
             CustomAttributeNamedArgument memberInfoCustomAttributeNamedArgument = memberInfoCustomAttributeNamedArguments[0];
-            return memberInfoCustomAttributeNamedArgument.TypedValue.Value.ToString();
+            return (string)memberInfoCustomAttributeNamedArgument.TypedValue.Value;
         }
     }
 }

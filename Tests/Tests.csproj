@@ -53,6 +53,10 @@
     <Compile Include="src\tests\Base64UtilsTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="src\tests\ArrayUtilsTests.cs" />
+    <Compile Include="src\tests\constants\StopwatchConstantsTests.cs" />
+    <Compile Include="src\tests\constants\DateFormatConstantsTests.cs" />
+    <Compile Include="src\tests\constants\MediaTypeNamesConstantsTests.cs" />
+    <Compile Include="src\tests\StringUtilsTests.cs" />
     <Compile Include="src\tests\NumberUtilsTests.cs" />
     <Compile Include="src\tests\ListUtilsTests.cs" />
     <Compile Include="src\tests\FileSystemUtilsTests.cs" />

@@ -17,12 +17,10 @@ namespace io.github.crisstanza.csharputils
         }
 
         private readonly StreamUtils streamUtils;
-        private readonly StringUtils stringUtils;
 
         public HttpListenerUtils()
         {
             this.streamUtils = new StreamUtils();
-            this.stringUtils = new StringUtils();
         }
 
         public string SegmentToMethod(string segment)
