@@ -1,4 +1,6 @@
-﻿namespace io.github.crisstanza.csharputils
+﻿using System;
+
+namespace io.github.crisstanza.csharputils
 {
     public class NumberUtils
     {
@@ -15,21 +17,28 @@
             }
             else if (bytes < _m)
             {
-                return bytes / _k + " KB";
+                return this.Truncate2(bytes / _k) + " KB";
             }
             else if (bytes < _g)
             {
-                return bytes / _m + " MB";
+                return this.Truncate2(bytes / _m) + " MB";
             }
             else if (bytes < _t)
             {
-                return bytes / _g + " GB";
+                return this.Truncate2(bytes / _g) + " GB";
             }
             else
             {
                 return bytes + " bytes";
             }
         }
+
+        public string Truncate2(double number)
+        {
+            double power = Math.Pow(10, 2);
+            return (Math.Truncate(number * power) / power).ToString();
+        }
+
         public string ToHexa(int number, int size)
         {
             return "0x" + number.ToString("X" + size);
